@@ -183,3 +183,36 @@ function drop() {
         }
     });
 }
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json());
+
+
+// Define API endpoints
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    bot.chat(`/login ${password}`);
+    res.json({ message: 'Login command sent' });
+});
+
+app.post('/register', (req, res) => {
+    const { username, password } = req.body;
+    bot.chat(`/register ${password} ${password}`);
+    res.json({ message: 'Register command sent' });
+});
+
+app.post('/sendChat', (req, res) => {
+    const { message } = req.body;
+    bot.chat(message);
+    res.json({ message: 'Chat message sent' });
+});
+
+// Start the Express server
+const port = 3000;
+app.listen(port, () => {
+    console.log(`API server is running on port ${port}`);
+});
