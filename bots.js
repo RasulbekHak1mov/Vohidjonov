@@ -3,8 +3,8 @@ const mineflayer = require('mineflayer');
 const botUsername2 = 'Eleven_Prod';
 const botPassword2 = '12345678gg'
 const bot2 = mineflayer.createBot({
-    host: 'imuslimbeki.aternos.me',
-    port: 39779,
+    host: 'hypixel.uz',
+    port: 25565,
     username: `Eleven_Prod`,
     password: `12345678gg`,
 });
@@ -90,8 +90,8 @@ function drop() {
 const botUsername = 'HAKIMOV_TG';
 const botPassword = 'legenda';
 
-const serverIP = 'imuslimbeki.aternos.me';
-const serverPort = 39779
+const serverIP = 'hypixel.uz';
+const serverPort = 25565
 
 //const serverIP = 'hypixel.uz';
 //const serverPort = 25565;
